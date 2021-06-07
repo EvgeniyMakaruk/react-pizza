@@ -3,10 +3,13 @@ import React from 'react'
 
 const Sort = (props) => {
 
-  const items = ['Популярности', 'Цене', 'Алфавиту']
+  const items =
+    [{ name: 'Популярности', type: 'popular' },
+    { name: 'Цене', type: 'price' },
+    { name: 'Алфавиту', type: 'alphabet' }]
   const [active, setActive] = React.useState(0)
-  const chosenItem=items[active]
-//  У items взяли по индексу active
+  const chosenItem = items[active].name
+  //  У items взяли по индексу active
 
   const [openMenu, setOpenMenu] = React.useState(false)
   const OpenItems = () => {
@@ -33,7 +36,7 @@ const Sort = (props) => {
 
       <div className="sort__label">
         <svg
-          className={openMenu ? 'rotated':''}
+          className={openMenu ? 'rotated' : ''}
           width="10"
           height="6"
           viewBox="0 0 10 6"

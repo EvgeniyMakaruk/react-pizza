@@ -13,12 +13,12 @@ function SortPoPup({OpenItems, items, active, setActive}) {
       <div className="sort__popup">
          <ul>
             {
-               items.map((name, index) =>
+               items.map((obj, index) =>
                   <li
                   onClick={()=>changeActive(index)}
                   className={active===index ? 'active':''}
-                  key={`${name}_${index}`}
-                  >{name}</li>)
+                  key={`${obj.type}_${index}`}
+                  >{obj.name}</li>)
             }
          </ul>
       </div>
