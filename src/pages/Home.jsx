@@ -3,8 +3,8 @@ import Categories from '../components/Categories';
 import PizzaBlock from '../components/PizzaBlock';
 import Sort from '../components/Sort/Sort';
 
-function Home({ pizzas }) {
-  return (
+function Home({ items}) {
+    return (
     <div className="container">
       <div className="content__top">
 
@@ -18,8 +18,8 @@ function Home({ pizzas }) {
 
 
         {
-          pizzas.map((obj) =>
-            <PizzaBlock       
+          items && items.map((obj) =>
+            <PizzaBlock
               key={obj.id}
               {...obj}
 

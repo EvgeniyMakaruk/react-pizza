@@ -10,6 +10,7 @@ function Categories({ items, onClickItem }) {
 
    const changeItemCategory = (index) => {
       setItemCategory(index)
+      onClickItem(index)
 
    }
 
