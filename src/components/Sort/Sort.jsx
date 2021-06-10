@@ -55,6 +55,7 @@ const Sort = (props) => {
       </div>
       {
         openMenu && <SortPoPup
+          onClickItem={(index) => console.log(index)}
           OpenItems={OpenItems}
           items={items}
           active={active}

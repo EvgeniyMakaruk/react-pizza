@@ -1,13 +1,14 @@
 import React from 'react'
 
-function SortPoPup({OpenItems, items, active, setActive}) {
+function SortPoPup({OpenItems, items, active, setActive, onClickItem}) {
 
    
    
 
-   const changeActive=(index)=>{
+   const changeActive=(index,obj)=>{
       setActive(index)
       OpenItems(false)
+      onClickItem(index)
    }
    return (
       <div className="sort__popup">
